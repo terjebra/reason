@@ -1,4 +1,6 @@
-# Reason React attemp
+# Reason React
+Playing around with Reasonml, reason-react and reason-react-toolbox
+
 
 # Installation
 * Install reason-cli ttps://reasonml.github.io/guide/editor-tools/global-installation
@@ -11,3 +13,4 @@
 
 # Plugin vs-code
 vscode-reason
+
