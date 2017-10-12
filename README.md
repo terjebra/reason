@@ -3,7 +3,7 @@ Playing around with Reasonml, reason-react and reason-react-toolbox
 
 
 # Installation
-* Install reason-cli ttps://reasonml.github.io/guide/editor-tools/global-installation
+* Install [reason-cli](https://reasonml.github.io/guide/editor-tools/global-installation)
 * npm install --global bs-platform
 * npm install
 
