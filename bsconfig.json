@@ -1,0 +1,8 @@
+{
+  "name" : "reason",
+  "reason" : {"react-jsx" : 2},
+  "bs-dependencies": [
+    "reason-react-toolbox",
+    "reason-react"],
+  "sources": "src"
+}
