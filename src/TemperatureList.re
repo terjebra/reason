@@ -22,7 +22,7 @@ let make ::temperatures _ => {
                 fun temperature =>
                   <ReactToolboxBundled.Card key=temperature.id>
                     <ReactToolboxBundled.CardTitle
-                      title=(se (temperature.temperature ^ " (" ^ temperature.room ^ ")"))
+                      title=(se (temperature.temperature ^ "\176C  (" ^ temperature.room ^ ")"))
                       subtitle=(se temperature.date)
                     />
                   </ReactToolboxBundled.Card>
