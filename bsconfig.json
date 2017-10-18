@@ -3,6 +3,8 @@
   "reason" : {"react-jsx" : 2},
   "bs-dependencies": [
     "reason-react-toolbox",
-    "reason-react","bs-moment"],
+    "reason-react",
+    "bs-moment",
+    "bs-director"],
   "sources": "src"
 }

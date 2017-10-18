@@ -7,7 +7,7 @@ type state = {temperatures: list TemperatureList.temperature};
 type action =
   | AddTemperature TemperatureList.temperature;
 
-let component = ReasonReact.reducerComponent "App";
+let component = ReasonReact.reducerComponent "Temperatures";
 
 let onAdd (form: Form.formState) =>
   AddTemperature {
@@ -26,9 +26,5 @@ let make _ => {
       ReasonReact.Update {temperatures: [temperature, ...temperatures]}
     },
   render: fun {state, reduce} =>
-    <div className="app">
-      <ReactToolboxBundled.AppBar title="Temperatures" />
-      <Form onAdd=(reduce onAdd) />
-      <TemperatureList temperatures=state.temperatures />
-    </div>
+    <div> <Form onAdd=(reduce onAdd) /> <TemperatureList temperatures=state.temperatures /> </div>
 };

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --colors --hot --inline",
     "compile": "bsb -make-world -w",
-    "toolbox": "react-toolbox-themr"
+    "clean": "bsb -clean-world"
   },
   "author": "T.B",
   "keywords": [
@@ -18,13 +18,17 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "bs-director": "0.0.4",
+    "bs-moment": "^0.1.4",
+    "director": "^1.2.8",
     "moment": "^2.19.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-toolbox": "^2.0.0-beta.12"
+    "react-toolbox": "^2.0.0-beta.12",
+    "reason-react": "^0.2.4",
+    "reason-react-toolbox": "^0.2.2"
   },
   "devDependencies": {
-    "bs-moment": "^0.1.4",
     "bs-platform": "^1.9.2",
     "css-loader": "^0.28.7",
     "ejs-loader": "^0.3.0",
@@ -35,8 +39,6 @@
     "postcss-each": "^0.10.0",
     "postcss-import": "^10.0.0",
     "postcss-mixins": "^6.1.0",
-    "reason-react": "^0.2.4",
-    "reason-react-toolbox": "^0.2.2",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"

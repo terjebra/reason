@@ -11,6 +11,8 @@ S /home/terje/code/reason/node_modules/reason-react/lib/ocaml
 B /home/terje/code/reason/node_modules/reason-react/lib/ocaml
 S /home/terje/code/reason/node_modules/bs-moment/lib/ocaml
 B /home/terje/code/reason/node_modules/bs-moment/lib/ocaml
+S /home/terje/code/reason/node_modules/bs-director/lib/ocaml
+B /home/terje/code/reason/node_modules/bs-director/lib/ocaml
 S src
 B lib/bs/src
 ####BSB GENERATED: NO EDIT}
