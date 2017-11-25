@@ -1,6 +1,7 @@
 {
   "name" : "reason",
   "reason" : {"react-jsx" : 2},
+  "refmt": 3,  
   "bs-dependencies": [
     "reason-react-toolbox",
     "reason-react",

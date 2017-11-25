@@ -1,8 +1,8 @@
-let component = ReasonReact.statelessComponent "Layout";
+let component = ReasonReact.statelessComponent("Layout");
 
-let make ::page _ => {
+let make = (~page, _) => {
   ...component,
-  render: fun _ =>
+  render: (_) =>
     <div>
       <ReactToolboxBundled.AppBar title="Temperatures" flat=true>
         <ReactToolboxBundled.Navigation>

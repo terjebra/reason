@@ -1,12 +1,12 @@
-type styleType = Js.t {. title : string};
+type styleType = {. "title": string};
 
 let styles: styleType = [%bs.raw "require('src/title.css')"];
 
-let component = ReasonReact.statelessComponent "Title";
+let component = ReasonReact.statelessComponent("Title");
 
 let se = ReasonReact.stringToElement;
 
-let make ::title _ => {
+let make = (~title, _) => {
   ...component,
-  render: fun _ => <h2 className=styles##title> (se title) </h2>
+  render: (_) => <h2 className=styles##title> (se(title)) </h2>
 };

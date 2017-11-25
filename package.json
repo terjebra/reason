@@ -25,11 +25,11 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-toolbox": "^2.0.0-beta.12",
-    "reason-react": "^0.2.4",
+    "reason-react": "^0.3.0",
     "reason-react-toolbox": "^0.2.2"
   },
   "devDependencies": {
-    "bs-platform": "^1.9.2",
+    "bs-platform": "^2.1.0",
     "css-loader": "^0.28.7",
     "ejs-loader": "^0.3.0",
     "extract-text-webpack-plugin": "^3.0.1",
@@ -38,6 +38,7 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-each": "^0.10.0",
     "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.8",
     "postcss-mixins": "^6.1.0",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",

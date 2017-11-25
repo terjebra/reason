@@ -6,44 +6,44 @@ type formState = {
 let se = ReasonReact.stringToElement;
 
 type action =
-  | UpdateRoom string
-  | UpdateTemperature string
+  | UpdateRoom(string)
+  | UpdateTemperature(string)
   | Submit;
 
-let component = ReasonReact.reducerComponent "Form";
+let component = ReasonReact.reducerComponent("Form");
 
-let submit _event => Submit;
+let submit = (_event) => Submit;
 
-let make ::onAdd _ => {
+let make = (~onAdd, _) => {
   ...component,
-  initialState: fun () => {room: "", temperature: ""},
-  reducer: fun action formState =>
+  initialState: () => {room: "", temperature: ""},
+  reducer: (action, formState) =>
     switch action {
-    | UpdateRoom value => ReasonReact.Update {...formState, room: value}
-    | UpdateTemperature value => ReasonReact.Update {...formState, temperature: value}
+    | UpdateRoom(value) => ReasonReact.Update({...formState, room: value})
+    | UpdateTemperature(value) => ReasonReact.Update({...formState, temperature: value})
     | Submit =>
-      ReasonReact.UpdateWithSideEffects {room: "", temperature: ""} (fun _self => onAdd formState)
+      ReasonReact.UpdateWithSideEffects({room: "", temperature: ""}, ((_self) => onAdd(formState)))
     },
-  render: fun {state, reduce} =>
+  render: ({state, reduce}) =>
     <div>
       <ReactToolboxBundled.Input
         floating=true
-        label=(se "Room")
-        onChange=(fun value _ => (reduce (fun value => UpdateRoom value)) value |> ignore)
+        label=(se("Room"))
+        onChange=((value, _) => (reduce((value) => UpdateRoom(value)))(value) |> ignore)
         value=state.room
       />
       <ReactToolboxBundled.Input
         floating=true
-        label=(se "Temperature")
+        label=(se("Temperature"))
         value=state.temperature
-        onChange=(fun value _ => (reduce (fun value => UpdateTemperature value)) value |> ignore)
+        onChange=((value, _) => (reduce((value) => UpdateTemperature(value)))(value) |> ignore)
       />
       <ReactToolboxBundled.Button
         primary=true
         ripple=true
         raised=true
         label="Add"
-        onClick=(reduce submit)
+        onClick=(reduce(submit))
       />
     </div>
 };
